@@ -7,10 +7,110 @@
     <title>Crunch Time</title>
     <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed">
 </head>
 
-<body>
-    <h1>Crunch Time</h1>
+<body class="body">
+    <header>
+        <h1>Crunch Time</h1>
+        <div class="timer-container">
+            <p id="timer">200</p>
+            <p>Time Left</p>
+        </div>
+    </header>
+    <main>
+        <section id="start">
+            <h2>JavaScript Coding Quiz</h2>
+            <p>Challenge your knowledge of JavaScript with this exciting timed quiz! Each question will test your
+                JavaScript skills,
+                and you'll have 30 seconds to answer. Why not invite your friends to join and see who's the JavaScript
+                master among you?</p>
+            <p>Let's get started!</p>
+            <button id="start-test">Start Test</button>
+        </section>
+        <section id="question-1" class="hidden">
+            <h2>What does JavaScript primarily allow you to do in web development?</h2>
+            <button id="q1a">A&rpar; Create interactive web pages</button>
+            <button id="q1b">B&rpar; Style web pages</button>
+            <button id="q1c">C&rpar; Generate database reports</button>
+            <button id="q1d">D&rpar; Manage server infrastructure</button>
+        </section>
+        <section id="question-2" class="hidden">
+            <h2>Which keyword is used to declare a variable in JavaScript?</h2>
+            <button id="q2a">A&rpar; var</button>
+            <button id="q2b">B&rpar; int</button>
+            <button id="q2c">C&rpar; string</button>
+            <button id="q2d">D&rpar; let</button>
+        </section>
+        <section id="question-3" class="hidden">
+            <h2>How do you write a multi-line comment in JavaScript?</h2>
+            <button id="q3a">A&rpar; # This is a comment</button>
+            <button id="q3b">B&rpar; // This is a comment</button>
+            <button id="q3c">C&rpar; /* This is a comment */</button>
+            <button id="q3d">D&rpar; /* This is a multi-line comment */</button>
+        </section>
+
+        <section id="question-4" class="hidden">
+            <h2>Which function is used to display a message in a popup dialog box?</h2>
+            <button id="q4a">A&rpar; alert()</button>
+            <button id="q4b">B&rpar; prompt()</button>
+            <button id="q4c">C&rpar; confirm()</button>
+            <button id="q4d">D&rpar; log()</button>
+        </section>
+        <section id="question-5" class="hidden">
+            <h2>What is the correct way to write a conditional statement in JavaScript to check if x is equal to y?</h2>
+            <button id="q5a">A&rpar; if (x == y) { }</button>
+            <button id="q5b">B&rpar; if x = y { }</button>
+            <button id="q5c">C&rpar; if [x == y] { }</button>
+            <button id="q5d">D&rpar; if {x == y} then</button>
+        </section>
+        <section id="question-6" class="hidden">
+            <h2>Which symbol is used to write a single-line comment in JavaScript?</h2>
+            <button id="q6a">A&rpar; /* This is a comment */</button>
+            <button id="q6b">B&rpar; // This is a comment</button>
+            <button id="q6c">C&rpar; # This is a comment</button>
+            <button id="q6d">D&rpar; ~~ This is a comment ~~</button>
+        </section>
+
+        <section id="question-7" class="hidden">
+            <h2>What is the result of the expression 3 + "3" in JavaScript?</h2>
+            <button id="q7a">A&rpar; 6</button>
+            <button id="q7b">B&rpar; "33"</button>
+            <button id="q7c">C&rpar; 33</button>
+            <button id="q7d">D&rpar; "6"</button>
+        </section>
+        <section id="question-8" class="hidden">
+            <h2>Which operator is used to assign a value to a variable in JavaScript?</h2>
+            <button id="q8a">A&rpar; ==</button>
+            <button id="q8b">B&rpar; =</button>
+            <button id="q8c">C&rpar; ===</button>
+            <button id="q8d">D&rpar; :</button>
+        </section>
+        <section id="question-9" class="hidden">
+            <h2>How do you declare a function in JavaScript?</h2>
+            <button id="q9a">A&rpar; function myFunction() { }</button>
+            <button id="q9b">B&rpar; var function = myFunction() { }</button>
+            <button id="q9c">C&rpar; declare function myFunction() { }</button>
+            <button id="q9d">D&rpar; def myFunction():</button>
+        </section>
+        <section id="question-10" class="hidden">
+            <h2>Which JavaScript method can be used to select an HTML element by its id?</h2>
+            <button id="q10a">A&rpar; getElement()</button>
+            <button id="q10b">B&rpar; selectById()</button>
+            <button id="q10c">C&rpar; getElementById()</button>
+            <button id="q10d">D&rpar; querySelector()</button>
+        </section>
+        <section id="end" class="hidden">
+            <h2>All Done!</h2>
+            <p>Your Total Score:0</p>
+            <label for="score">Enter Your Initials:</label>
+            <input type="text" id="score">
+        </section>
+        <section id="high-score" class="hidden">
+            <h2>High Scores:</h2>
+            <ul></ul>
+        </section>
+    </main>
     <script src="/assets/script/script.js"></script>
 </body>
 

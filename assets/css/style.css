@@ -3,8 +3,18 @@ body {
 }
 
 main {
-   max-width: 1000px;
+   max-width: 600px;
    margin: auto;
+}
+
+button {
+   background-color: #afa9ff;
+   border-radius: 6px;
+   padding: 6px;
+}
+
+h2 {
+   font-size: 32px;
 }
 
 #start {
@@ -21,4 +31,43 @@ header {
    justify-content: space-between;
    margin: auto;
    max-width: 1000px;
+   font-size: 32px;
+   padding: 12px 0px 24px 0px;
+}
+
+#start p,
+.choice-container button {
+   font-size: 20px;
+}
+
+#start p,
+#start h2 {
+   padding: 12px;
+}
+
+.choice-container {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   max-width: 275px;
+   flex-wrap: nowrap;
+   padding: 12px;
+}
+
+.choice-container button {
+   text-align: left;
+   padding: 12px;
+}
+
+.hidden {
+   display: none;
+}
+
+#end {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   width: fit-content;
+   gap: 8px;
+   padding: 12px;
 }

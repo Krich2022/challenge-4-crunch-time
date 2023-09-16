@@ -7,6 +7,7 @@ main {
    margin: auto;
 }
 
+.button-question,
 button {
    background-color: #afa9ff;
    border-radius: 6px;
@@ -59,15 +60,15 @@ header {
    padding: 12px;
 }
 
-.hidden {
-   display: none;
-}
-
-#end {
+.end {
    display: flex;
    flex-direction: column;
    margin: auto;
    width: fit-content;
    gap: 8px;
    padding: 12px;
+}
+
+.hidden {
+   display: none;
 }

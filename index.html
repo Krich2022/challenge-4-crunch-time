@@ -12,8 +12,10 @@
 
 <body class="body">
     <header>
+        <span id="view-high-scores" class="high-score-button">View High Scores</span>
+
         <h1>Crunch Time</h1>
-        <div class="timer-container">
+        <div class="timer-container timer-hidden">
             <p id="timer">200</p>
             <p>Time Left</p>
         </div>
@@ -23,7 +25,7 @@
             <h2>JavaScript Coding Quiz</h2>
             <p>Challenge your knowledge of JavaScript with this exciting timed quiz! Each question will test your
                 JavaScript skills,
-                and you'll have 30 seconds to answer. Why not invite your friends to join and see who's the JavaScript
+                and you'll have 20 seconds to answer. Why not invite your friends to join and see who's the JavaScript
                 master among you?</p>
             <p>Let's get started!</p>
             <button id="start-test">Start Test</button>
@@ -40,7 +42,7 @@
         <section id="question-2" class="hidden">
             <h2>Which keyword is used to declare a variable in JavaScript?</h2>
             <div class="choice-container">
-                <button id="q2a" class="button-question">A&rpar; var</button>
+                <button id="q2a" class="button-question">A&rpar; variable</button>
                 <button id="q2b" class="button-question">B&rpar; int</button>
                 <button id="q2c" class="button-question">C&rpar; string</button>
                 <button id="q2d" class="button-question">D&rpar; let</button>
@@ -51,7 +53,7 @@
             <div class="choice-container">
                 <button id="q3a" class="button-question">A&rpar; # This is a comment</button>
                 <button id="q3b" class="button-question">B&rpar; // This is a comment</button>
-                <button id="q3c" class="button-question">C&rpar; /* This is a comment */</button>
+                <button id="q3c" class="button-question">C&rpar; / This is a comment /</button>
                 <button id="q3d" class="button-question">D&rpar; /* This is a multi-line comment */</button>
             </div>
         </section>
@@ -122,7 +124,7 @@
         </section>
         <section id="end" class="end hidden">
             <h2>All Done!</h2>
-            <p id="user-score">Your Total Score:0</p>
+            <p>Your Total Score:<span id="user-score">0</span></p>
             <label for="score">Enter Your Initials:</label>
             <input type="text" id="score">
             <div>
@@ -133,6 +135,7 @@
         <section id="high-score" class="hidden">
             <h2>High Scores:</h2>
             <ul id="scores"></ul>
+            <button id="start-over">Start Over</button>
         </section>
     </main>
     <script src="/assets/script/script.js"></script>

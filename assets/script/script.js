@@ -112,8 +112,9 @@ function checkQuestion(e) {
         }
         if (isCorrect) {
             score++;
-        } else {
-            timeLeft = timeleft - 20;
+        }
+        if (!isCorrect) {
+            timeLeft = timeLeft - 20;
         }
     }
 }

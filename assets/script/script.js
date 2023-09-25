@@ -112,6 +112,8 @@ function checkQuestion(e) {
         }
         if (isCorrect) {
             score++;
+        } else {
+            timeLeft = timeleft - 20;
         }
     }
 }

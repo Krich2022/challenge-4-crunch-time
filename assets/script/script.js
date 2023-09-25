@@ -1,12 +1,12 @@
 let score = 0;
-const correctQuestions = ["q1a", "q2d", "q3d", "q4a", "q5a", "q6b", "q7b", "q8b", "q9a", "q10c"];
+const correctAnswers = ["q1a", "q2d", "q3d", "q4a", "q5a", "q6b", "q7b", "q8b", "q9a", "q10c"];
 let questions = document.querySelectorAll('[id*="question"]');
 const start = document.getElementById("start-test");
 const startContainer = document.getElementById("start");
 let currentQuestion = 1;
 let previousQuestion = 0;
 const timer = document.getElementById("timer");
-let timeLeft = 0;
+let timeLeft = 200;
 const timerContainer = document.querySelector(".timer-container");
 const timesUp = document.getElementById("time-up");
 const allDone = document.getElementById("end");
@@ -15,6 +15,7 @@ const retakeTest = document.getElementById("retake-test");
 const submitScore = document.getElementById("submit-score");
 const allScores = document.getElementById("high-score");
 let highScores = [];
+let isCorrect = false;
 
 document.getElementById("view-high-scores").addEventListener("click", () => {
     retrieveHighScore();
@@ -37,7 +38,16 @@ start.addEventListener("click", startTest);
 nextQuestionButtons.forEach((button) => {
     button.addEventListener("click", () => {
         checkQuestion(button);
-        nextQuestion();
+        if (isCorrect) {
+            button.classList.add("correct");
+        } else {
+            button.classList.add("wrong");
+        }
+        setTimeout(() => {
+            nextQuestion();
+            button.classList.remove("correct");
+            button.classList.remove("wrong");
+        }, 500);
     });
 });
 function startTest() {
@@ -65,7 +75,7 @@ function startTimer() {
     timer.innerHTML = timeLeft;
     if (!allScores.classList.contains("hidden")) {
         return;
-    } else if (timeLeft === 0 || currentQuestion === 11) {
+    } else if (timeLeft <= 0 || currentQuestion === 11) {
         timerContainer.classList.add("timer-hidden");
         endTest();
     } else {
@@ -93,14 +103,16 @@ function hideQuestion() {
 }
 
 function checkQuestion(e) {
-    let isCorrect = false;
-    for (let i = 0; i < correctQuestions.length; i++) {
-        if (e.id === correctQuestions[i]) {
-            isCorrect = true;
+    isCorrect = false;
+    if (currentQuestion < 10) {
+        for (let i = 0; i < correctAnswers.length; i++) {
+            if (e.id === correctAnswers[i]) {
+                isCorrect = true;
+            }
         }
-    }
-    if (isCorrect) {
-        score++;
+        if (isCorrect) {
+            score++;
+        }
     }
 }
 

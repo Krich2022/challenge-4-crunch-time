@@ -90,3 +90,11 @@ header {
 #high-score ul {
     padding: 20px;
 }
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
